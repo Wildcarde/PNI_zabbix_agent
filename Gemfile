@@ -5,7 +5,6 @@ group :test do
   gem 'coveralls',                 :require => false
   gem 'simplecov-console',         :require => false
   gem 'fakefs',                    :require => false
-  gem 'zabbixapi',                 :require => false
 end
 
 group :development do

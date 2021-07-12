@@ -87,22 +87,22 @@ class zabbix::repo (
           priority => '1',
         }
 
-        # Zabbix 5.0 frontend on CentOS 7 has different location.
-        if ($facts['os']['name'] == 'CentOS' and $majorrelease == '7' and $zabbix_version == '5.0') {
-          $_frontend_repo_location = $frontend_repo_location ? {
-            undef   => "https://repo.zabbix.com/zabbix/${zabbix_version}/rhel/${majorrelease}/\$basearch/frontend",
-            default => $frontend_repo_location,
-          }
+        # # Zabbix 5.0 frontend on CentOS 7 has different location.
+        # if ($facts['os']['name'] == 'CentOS' and $majorrelease == '7' and $zabbix_version == '5.0') {
+        #   $_frontend_repo_location = $frontend_repo_location ? {
+        #     undef   => "https://repo.zabbix.com/zabbix/${zabbix_version}/rhel/${majorrelease}/\$basearch/frontend",
+        #     default => $frontend_repo_location,
+        #   }
 
-          yumrepo { 'zabbix-frontend':
-            name     => "Zabbix_frontend_${majorrelease}_${facts['os']['architecture']}",
-            descr    => "Zabbix_frontend_${majorrelease}_${facts['os']['architecture']}",
-            baseurl  => $_frontend_repo_location,
-            gpgcheck => '1',
-            gpgkey   => $gpgkey_zabbix,
-            priority => '1',
-          }
-        }
+        #   yumrepo { 'zabbix-frontend':
+        #     name     => "Zabbix_frontend_${majorrelease}_${facts['os']['architecture']}",
+        #     descr    => "Zabbix_frontend_${majorrelease}_${facts['os']['architecture']}",
+        #     baseurl  => $_frontend_repo_location,
+        #     gpgcheck => '1',
+        #     gpgkey   => $gpgkey_zabbix,
+        #     priority => '1',
+        #   }
+        # }
       }
       'Debian': {
         if ($manage_apt) {

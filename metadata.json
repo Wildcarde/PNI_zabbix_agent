@@ -5,20 +5,8 @@
   "author": "Vox Pupuli",
   "dependencies": [
     {
-      "name": "puppetlabs/postgresql",
-      "version_requirement": ">= 6.4.0 < 8.0.0"
-    },
-    {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.25.0 < 8.0.0"
-    },
-    {
-      "name": "puppetlabs/mysql",
-      "version_requirement": ">= 3.5.0 < 12.0.0"
-    },
-    {
-      "name": "puppetlabs/apache",
-      "version_requirement": ">= 1.6.0 < 7.0.0"
     },
     {
       "name": "puppetlabs/firewall",
@@ -37,16 +25,13 @@
       "version_requirement": ">= 1.1.0 < 4.0.0"
     }
   ],
-  "source": "https://github.com/voxpupuli/puppet-zabbix.git",
-  "project_page": "https://github.com/voxpupuli/puppet-zabbix",
-  "issues_url": "https://github.com/voxpupuli/puppet-zabbix/issues",
+  "source": "https://github.com/Wildcarde/puppet-zabbix-agent-vox.git",
+  "project_page": "https://github.com/Wildcarde/puppet-zabbix-agent-vox",
+  "issues_url": "https://github.com/Wildcarde/puppet-zabbix-agent-vox/issues",
   "license": "Apache-2.0",
   "tags": [
     "zabbix",
-    "zabbix-server",
-    "zabbix-proxy",
     "zabbix-agent",
-    "zabbix-javagateway",
     "monitoring"
   ],
   "requirements": [
