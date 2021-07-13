@@ -10,7 +10,7 @@
 #
 # sample usage:
 #
-class zabbix::params {
+class puppet_zabbix_agent_vox::params {
   # It seems that ubuntu has an different fping path...
   case $facts['os']['name'] {
     'Ubuntu', 'Debian' : {

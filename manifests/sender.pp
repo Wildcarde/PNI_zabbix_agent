@@ -18,7 +18,7 @@
 # [*manage_repo*]
 #   When true, it will create repository for installing the agent.
 #
-class zabbix::sender (
+class puppet_zabbix_agent_vox::sender (
   $zabbix_version        = $zabbix::params::zabbix_version,
   $zabbix_package_state  = $zabbix::params::zabbix_package_state,
   $manage_repo           = $zabbix::params::manage_repo,

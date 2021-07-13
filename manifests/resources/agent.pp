@@ -13,7 +13,7 @@
 # for loading this class manually.
 #
 #
-class zabbix::resources::agent (
+class puppet_zabbix_agent_vox::resources::agent (
   $hostname                = undef,
   $ipaddress               = undef,
   $use_ip                  = undef,

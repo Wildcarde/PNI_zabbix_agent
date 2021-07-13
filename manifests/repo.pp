@@ -31,14 +31,14 @@
 #
 # Copyright 2014 Werner Dijkerman
 #
-class zabbix::repo (
+class puppet_zabbix_agent_vox::repo (
   Boolean                   $manage_repo               = $zabbix::params::manage_repo,
   Boolean                   $manage_apt                = $zabbix::params::manage_apt,
   Optional[Stdlib::HTTPUrl] $repo_location             = $zabbix::params::repo_location,
   Optional[Stdlib::HTTPUrl] $frontend_repo_location    = $zabbix::params::frontend_repo_location,
   Optional[Stdlib::HTTPUrl] $unsupported_repo_location = $zabbix::params::unsupported_repo_location,
   String[1]                 $zabbix_version            = $zabbix::params::zabbix_version,
-) inherits zabbix::params {
+) inherits puppet_zabbix_agent_vox::params {
   if ($manage_repo) {
     case $facts['os']['name'] {
       'PSBM': {

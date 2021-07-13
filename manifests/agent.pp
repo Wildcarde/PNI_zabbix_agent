@@ -276,7 +276,7 @@
 # Copyright 2014 Werner Dijkerman
 #
 
-class zabbix::agent (
+class puppet_zabbix_agent_vox::agent (
   $zabbix_version                                 = $zabbix::params::zabbix_version,
   $zabbix_package_state                           = $zabbix::params::zabbix_package_state,
   $zabbix_package_agent                           = $zabbix::params::zabbix_package_agent,
@@ -356,7 +356,7 @@ class zabbix::agent (
   String $additional_service_params               = $zabbix::params::additional_service_params,
   String $service_type                            = $zabbix::params::service_type,
   Boolean $manage_startup_script                  = $zabbix::params::manage_startup_script,
-) inherits zabbix::params {
+) inherits puppet_zabbix_agent_vox::params {
   # Find if listenip is set. If not, we can set to specific ip or
   # to network name. If more than 1 interfaces are available, we
   # can find the ipaddress of this specific interface if listenip

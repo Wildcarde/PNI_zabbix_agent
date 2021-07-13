@@ -11,7 +11,7 @@
 #  zabbix::startup { 'agent':
 #  }
 #
-define zabbix::startup (
+define puppet_zabbix_agent_vox::startup (
   Optional[Stdlib::Absolutepath] $pidfile                = undef,
   Optional[Stdlib::Absolutepath] $agent_configfile_path  = undef,
   Optional[Stdlib::Absolutepath] $server_configfile_path = undef,
