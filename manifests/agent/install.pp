@@ -1,7 +1,7 @@
 class pnizabbix::agent::install{
 
-  package { 'zabbix-agent' :
-    ensure => present,
+  package { 'zabbix52-agent' :
+    ensure => latest,
   }
 
 }
