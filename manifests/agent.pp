@@ -3,7 +3,7 @@
 
 class pnizabbix::agent{
 
-  include PNIzabbix::params
+  include pnizabbix::params
 
   class {'pnizabbix::agent::install':}
   class {'pnizabbix::agent::config':}
