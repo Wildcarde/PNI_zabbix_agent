@@ -3,8 +3,8 @@ class pnizabbix::agent::config{
   include pnizabbix::params
 
   file {'zabbix_agent_config':
-    path    => '/etc/zabbix/zabbix_agentd.conf',
-    content => template('pnizabbix/zabbix_agentd.conf.5.2.erb')
+    path    => '/etc/zabbix/zabbix_agent2.conf',
+    content => template('pnizabbix/zabbix_agent2.conf.5.2.erb')
   }
 
 ##old code from cses
