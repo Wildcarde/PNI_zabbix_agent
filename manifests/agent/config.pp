@@ -2,8 +2,8 @@ class pnizabbix::agent::config{
 
 
   file {'zabbix_agent_config':
-    path => '/etc/zabbix/zabbix_agentd.conf'
-    content => template('pnizabbix/zabbix_agentd.conf.5.2.ebb'),
+    path    => '/etc/zabbix/zabbix_agentd.conf',
+    content => template('pnizabbix/zabbix_agentd.conf.5.2.ebb')
   }
 
 ##old code from cses
