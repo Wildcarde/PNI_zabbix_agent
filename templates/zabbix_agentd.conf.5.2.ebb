@@ -130,7 +130,7 @@ Server= <%= pnizabbix::params::server %>
 #
 # Mandatory: no
 # Default:
-ListenIP= <%= pnizabbix::params::$agentlistenip %>
+ListenIP= <%= pnizabbix::params::agentlistenip %>
 
 ### Option: StartAgents
 #       Number of pre-forked instances of zabbix_agentd that process passive checks.
@@ -155,7 +155,7 @@ ListenIP= <%= pnizabbix::params::$agentlistenip %>
 # Default:
 # ServerActive=
 
-ServerActive=<%= pnizabbix::params::server %>
+ServerActive= <%= pnizabbix::params::server %>
 
 ### Option: Hostname
 #       List of comma delimited unique, case sensitive hostnames.
