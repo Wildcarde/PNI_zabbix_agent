@@ -1,5 +1,6 @@
 class pnizabbix::agent::config{
 
+  include pnizabbix::params
 
   file {'zabbix_agent_config':
     path    => '/etc/zabbix/zabbix_agentd.conf',
