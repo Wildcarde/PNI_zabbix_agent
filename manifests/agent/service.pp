@@ -4,7 +4,7 @@ class pnizabbix::agent::service{
 
   service { 'zabbix-agent' :
     ensure  => running,
-    require => Package['zabbix-agent'],
+    require => Package['zabbix52-agent'],
     enable  => true,
   }
 }
