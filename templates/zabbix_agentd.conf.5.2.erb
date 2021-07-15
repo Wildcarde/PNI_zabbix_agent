@@ -114,7 +114,7 @@ LogFileSize=0
 # Default:
 # Server=
 
-Server= <%= $pnizabbix::params::server %>
+Server=<%= scope['pnizabbix::params::server'] %>
 
 ### Option: ListenPort
 #       Agent will listen on this port for connections from the server.
@@ -130,7 +130,8 @@ Server= <%= $pnizabbix::params::server %>
 #
 # Mandatory: no
 # Default:
-ListenIP= <%= $pnizabbix::params::agentlistenip %>
+
+ListenIP=<%= scope['pnizabbix::params::agentlistenip'] %>
 
 ### Option: StartAgents
 #       Number of pre-forked instances of zabbix_agentd that process passive checks.
@@ -155,7 +156,7 @@ ListenIP= <%= $pnizabbix::params::agentlistenip %>
 # Default:
 # ServerActive=
 
-ServerActive= <%= $pnizabbix::params::server %>
+ServerActive=<%= scope['pnizabbix::params::server'] %>
 
 ### Option: Hostname
 #       List of comma delimited unique, case sensitive hostnames.
@@ -166,7 +167,7 @@ ServerActive= <%= $pnizabbix::params::server %>
 # Default:
 # Hostname=
 
-Hostname=<%= $facts[fqdn] %>
+Hostname=<%= @fqdn %>
 
 ### Option: HostnameItem
 #       Item used for generating Hostname if it is undefined. Ignored if Hostname is defined.
